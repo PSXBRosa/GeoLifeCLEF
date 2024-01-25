@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='GCE',
@@ -6,7 +6,7 @@ setup(
     description='fork for using the GCE package',
     author='Not Pedro',
     author_email='jdoe@example.com',
-    packages=['GCE.data_loading'],
+    packages=find_packages(),
     install_requires=[
         'numpy',
         'pillow',
