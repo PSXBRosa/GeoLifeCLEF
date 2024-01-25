@@ -174,4 +174,4 @@ class GeoLifeCLEF2022Dataset(Dataset):
 
             return patches, target
         else:
-            return patches
+            return patches, None
