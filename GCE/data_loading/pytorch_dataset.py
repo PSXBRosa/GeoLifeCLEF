@@ -58,6 +58,11 @@ class GeoLifeCLEF2022Dataset(Dataset):
         self.patch_data = patch_data
         self.transform = transform
         self.target_transform = target_transform
+        self.species_details = pd.read_csv(
+            self.root / "metadata" / "species_details.csv",
+            sep=";",
+        )
+        self.categories = list(self.species_details["species_id"])
 
         possible_subsets = ["train", "val", "train+val", "test"]
         if subset not in possible_subsets:
